@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>AquitBoy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="AquitBoy">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="AquitBoy">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AquitBoy">
+  
+    <link rel="alternate" href="/atom.xml" title="AquitBoy" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">AquitBoy</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-js" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/19/js/" class="article-date">
+  <time datetime="2018-11-19T04:23:56.082Z" itemprop="datePublished">2018-11-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-js"><a href="#1-js" class="headerlink" title="1.js"></a>1.js</h1><p>1.什么是js<br>js是javascript的缩写。是一门专门用来处理网页中的行为的脚本语言，也是web中的行为标准；javascript和Java没有关系。<br>2.在什么地方写js代码<br>内联的：写在标签事件相关的属性中，onclick属性，属性值就是js代码。<br>内部的js：写在script标签中的内容，script标签理论上是可以放在整个HTML文件的任意位置，但是一般放在head和body中。<br>外部的：写在外部的js文件中，后缀是.js的文件，然后通过<br><code>&lt;script type=&quot;text/javascript&quot; src=&quot;js/01js.js&quot;&gt;</code>    导入<br>3.js可以做什么<br>js可以修改标签中的内容。<br>可以修改标签的样式。<br>插入HTML代码</p>
+<p>#2.js语法</p>
+<p>1.注释：单行：//；<br>多行：/<em>           </em>/<br>2.标识符：用来命名的。js中要求标识符由字母数字，下划线和$符组成，数字不能开头。<br>3.打印：consol.log(内容)  ；打印在控制台，网页中用检查查看控制台<br>4.js中大小写敏感，js没有缩进的要求。<br>5.常用数字类型：数字Number，布尔（Boolean)，字符串（String),数组（Array)，字典（Object），函数（Function）<br>数字类型（Number）：正数和小数，科学计数；不支持虚数<br>布尔（Boolean）：true和false<br>字符串（String）：支持单引号和双引号<br>数组（Array）：相对于python中的列表<br>对象（Object）：python中对象和字典的集合；{name:’hk’,age:22}name,age是对象属性。<br>函数（Function):<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function 函数名（）&#123;</span><br><span class="line">	函数体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>相关方法：<br>typeof(数据)  —-&gt; 获取数据的类型：打印出来的类型是小写的<br>转换：<br>new 类型名（数据）-将数据转换成指定的类型<br>特殊值：<br>undefined:相当于python中的None<br>null：用来清空变量<br>声明变量<br>var 变量名 ；var是js关键字。不赋值时默认值为undefined;<br>变量名=变量值；<br>命名规范：驼峰式命名。<br>同时声明多个变量：var age,sex=10,name</p>
+<p>js中支持：数学运算符，逻辑运算符，比较运算符，赋值运算符，位运算符<br>数学运算符：<br>没有//整除；++（自加1）–（自减1） ；a=i++先赋值在加一，a=++i先加一在赋值。<br>比较运算符：<br>> &lt; &gt;= &lt;= 都不看类型<br>===  要看类型<br>==（相等）：判断值是否相等5==‘5’<br>===（完全相等）：判断值和类型是否相等5!==’5‘<br>!==(不完全相等)：<br>逻辑运算符：&amp;&amp;（与）  ||（或）  ！（非）<br>位运算：&amp; | ^ ~ &gt;&gt;  &lt;&lt;<br>符合运算：数字&gt;比较&gt;逻辑&gt;赋值</p>
+<p>分支结构：if和switch<br>if结构：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(条件语句)&#123;</span><br><span class="line">代码段</span><br><span class="line">&#125;</span><br><span class="line">else if(条件语句)&#123;代码块&#125;</span><br><span class="line">else&#123;代码块&#125;</span><br></pre></td></tr></table></figure></p>
+<p>switch结构：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">switch(变量/表达式)&#123;</span><br><span class="line">	case 值1：&#123;代码段&#125;</span><br><span class="line">	case 值2：&#123;代码段&#125;</span><br><span class="line">	default:&#123;代码段&#125; </span><br><span class="line">	//case后可不写&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>先得到变量和表达式的值，从上往下执行，直到遇到与case后的值相等，执行之后的所有代码段，直到遇到break；如果都没有相等的值，就执行default之后的所有代码块。<br>注意：case后的值不可以一样。</p>
+<p>循环：<br>for(变量 in 序列){}<br>注意：取出来的是下标或者属性名(key)<br>for(表达式1；条件语句；表达式3){}<br><code>for(num=1,sum=2;num&lt;10;num++){}</code><br><code>for(;a&lt;10;){}</code></p>
+<p>while(条件语句){循环体}<br>do-while循环<br>do{循环体} while()  该循环会执行一次代码块，再检查条件是否为真，然后如果条件为真的话，就会重复这个循环。</p>
+<p>函数分为声明和调用：声明不会执行函数体，只有调用才执行函数体。<br>声明：驼峰式命名<br>function 函数名(参数列表){<br>​    函数体<br>​    return 返回值<br>}<br>函数的调用：函数名(实参列表)  如果参数没有设置默认值，相当于默认值为undefined<br>只能通过位置参数传参；没有return返回值是undefined。<br>以声明变量的形式声明函数：<br>函数名=function（参数列表）{函数体 return 返回值}</p>
+<p>转义字符：和python一样<br>字符串长度：字符串.length<br>获取单个字符：字符串[下标（正的）]   负的下标或者超出范围得到的是undefined。没有切片语法。<br>相关运算符：</p>
+<ul>
+<li>如果是其他类型的数据，会先转换为字符串，[1,2,3]转换得到的是“1，2，3”<br>*不支持，“ab”*2得到NaN，表示一个不存在的数字，数字类型中的一个特殊值。Infinity:无穷大； </li>
+</ul>
+<p>数组就是python中的列表，<br>增删改查<br>增加：数组.push(元素)   增加到最后<br>删除:数组.pop(元素)   删除最后一个元素<br>splice()：很强大的数组方法，它有很多种用法，可以实现删除、插入和替换。<br>删除：可以删除任意数量的项，只需指定 2 个参数：要删除的第一项的位置和要删除的项数。例如， splice(0,2)会删除数组中的前两项。<br>插入：可以向指定位置插入任意数量的项，只需提供 3 个参数：起始位置、 0（要删除的项数）和要插入的项。例如，splice(2,0,4,6)会从当前数组的位置 2 开始插入4和6。<br>替换：可以向指定位置插入任意数量的项，且同时删除任意数量的项，只需指定 3 个参数：起始位置、要删除的项数和要插入的任意数量的项。插入的项数不必与删除的项数相等。例如，splice (2,1,4,6)会删除当前数组位置 2 的项，然后再从位置 2 开始插入4和6。<br>splice()方法始终都会返回一个数组，该数组中包含从原始数组中删除的项，如果没有删除任何项，则返回一个空数组。<br>slice()：返回从原数组中指定开始下标到结束下标之间的项组成的新数组。slice()方法可以接受一或两个参数，即要返回项的起始和结束位置。在只有一个参数的情况下， slice()方法返回从该参数指定位置开始到当前数组末尾的所有项。如果有两个参数，该方法返回起始和结束位置之间的项——但不包括结束位置的项</p>
+<p>js中没有python中的类；只有对象和构造方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">p=&#123;</span><br><span class="line">name:&quot;hk&quot;</span><br><span class="line">eat:function()&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">//使用对象属性</span><br><span class="line">p.name</span><br><span class="line">p[&quot;name&quot;]</span><br><span class="line">p.eat()</span><br></pre></td></tr></table></figure></p>
+<p>构造方法：<br>function 类名（参数列表）{<br>this.属性=属性值<br>this.属性=属性值<br>return this  //必须写<br>}</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/19/js/" data-id="cjony9mu50001q3qdwtserlz5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/19/hello-world/" class="article-date">
+  <time datetime="2018-11-19T03:50:38.641Z" itemprop="datePublished">2018-11-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/19/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/19/hello-world/" data-id="cjony9mtq0000q3qdl8n9v29a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/19/js/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/19/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
