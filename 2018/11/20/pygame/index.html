@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="AquitBoy">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="AquitBoy">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://yoursite.com">
+  
+    <link rel="alternate" href="/atom.xml" title="AquitBoy" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>AquitBoy</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Untitled Post</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/<your-github-username>">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:<your-email-address>">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2018-11-20</span>
+            <span class="time">09:23:00</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="1-抽象类和抽象方法"><a href="#1-抽象类和抽象方法" class="headerlink" title="1.抽象类和抽象方法"></a>1.抽象类和抽象方法</h1><p>抽象类：只能被继承，不能实例化<br>抽象方法：声明的时候不用实现，在子类中必须去重写的方法<br>怎么声明：类继承abc模块中的ABCMeta,继承时要加参数metaclass，并且要通过abc.abstractmethod来声明抽象方法<br>子类继承一个抽象类，必须在子类中实现所有抽象方法。<br>metaclass–&gt;元类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import abc</span><br><span class="line">class Shape(metaclass=abc.ABCMeta):</span><br><span class="line">	@abc.abstractmethod</span><br><span class="line">	def draw(self):</span><br></pre></td></tr></table></figure></p>
+<p>#2.pygame</p>
+<p><strong>模块：</strong><br>display–&gt;屏幕相关<br>event–&gt;事件<br>draw–&gt;图形<br>image–&gt;图片<br>font—-&gt;字体<br>transform—&gt;缩放<br><strong>1.游戏初始化</strong><br>pygame.init()<br><strong>2.创建窗口对象</strong><br>set_mode(size)  —-&gt;size是元祖（长，宽）单位像素<br>screen = pygame.display.set_mode((600,400))<br>背景颜色：<br>screen.fill(颜色)—&gt;填充指定的颜色，元祖（red,green,blue)<br>计算机使用的是计算机三原色（红、绿、蓝）–&gt;rgb颜色,对应的值的范围是0-255<br>红色：（255，0，0）<br>绿色：（0，255，0）<br>白色：（255，255，255）<br>黑色：（0，0，0）<br>黄色：（255，255，0）<br><strong>3.游戏循环（不断检查是否有事件发生）</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">while True：</span><br><span class="line">	events = pygame.event.get()</span><br><span class="line">	#不同类型的事件，event的type属性不同</span><br><span class="line">	for event in events:</span><br><span class="line">		if event.type == pygame.QUIT	</span><br><span class="line">			exit()</span><br></pre></td></tr></table></figure></p>
+<p><strong>4.图片</strong><br>加载：load(图片地址)–&gt;返回图片对象<br>image= pygame.image.load(“./ldkf.jpg”)<br>渲染：screen.blit(渲染对象，渲染位置)–&gt;位置，元祖（左上角坐标为原点）<br>展示：只要想要将内容展示在屏幕上，都要用<br>pygame.display.flip()<br>获取图片的大小：图片.get_size()<br>image_width,image_height = image.get_size()<br>图片缩放：transform.scale(图片对象，大小)—&gt;将指定的图片缩放成指定的大小<br>new_image = pygame.transform.scale(image,(100,100))<br>图像的缩放和旋转：transform.rotozoom(图片对象，角度，比例)按比例缩放的,角度取值（0，360）逆时针旋转，不缩放也要写1，不写会报错<br><strong>文字显示</strong>：<br>1.创建字体对象：SysFont(字体名，字体大小，是否加粗=False，是否倾斜 = False)<br>font = pygame.font.SysFont(“NewTimes”,20)<br>或者：Font(字体文件路径，字体)<br>2.根据字体创建：字体对象.render(文字，是否抗锯齿，颜色)<br>text = font.render(“hello”,True,(0,255,0))<br>3.在屏幕上渲染文字<br>screen.blit(text,(100,100))<br><strong>图像显示</strong><br>1.画图： line(Surface,color,start_pos,end_pos,with= 1)<br>lines(Surface,color,closed,pointlist,width=1)<br>Surface:窗口，图片，文字对象<br>start_pos:开始坐标<br>width：宽度<br>closed:起点于终点是否连起来<br>pointlist:多个点的坐标<br>pygame.draw.lines(screen,(0,0,0),(50,50),(100,100),5)<br>2.画圆：<br>cirsle(Surface,color,pos,radius,width= 0)</p>
+<p><strong>事件</strong><br>鼠标事件：<br>pygame.MOUSEBUTTONDOWN—&gt;鼠标按下<br>pygame.MOUSEBUTTONUP—-&gt;鼠标弹起<br>pygame.MOUSEMOTTON—-&gt;鼠标移动<br>鼠标位置：event.pos<br>键盘事件：<br>pygame.KEYDOWN—-&gt;按键按下<br>pygame.KEYUP——&gt;按键弹起<br>键:event.key是编码值，chr(event.key)是字符</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        </p><p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
